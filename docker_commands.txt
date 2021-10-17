@@ -1,0 +1,56 @@
+
+Dockerコマンド
+
+DockerfileからDockerイメージをビルドする
+docker image build [options] (DockerfileのあるディレクトリのパスURL)
+
+DockerHubにホストされているDockerイメージを検索する
+docker search [options] 検索キーワード
+
+DockerレジストリからDockerイメージを取得する
+docker image pull [options] リポジトリ名[:タグ名]
+
+対象のDockerホストが保持しているDockerイメージの一覧を表示する
+docker image ls [options] [リポジトリ名[:タグ]]
+
+Dockerイメージのタグを作成する
+docker image tag 元イメージ[:タグ] 新イメージ[:タグ]
+
+DockerレジストリにDockerイメージを送信して登録する
+docker image push [options] リポジトリ名[:タグ]
+
+dockerdが保持しているコンテナの一覧を表示する
+docker container ls [options]
+
+実行中のコンテナを停止する
+docker container stop [options] (コンテナID|コンテナ名)..
+
+停止したコンテナを再度実行する
+docker container restart [options] (コンテナID|コンテナ名)..
+
+ディスクからコンテナを削除する
+docker container rm [options] (コンテナID|コンテナ名)..
+
+コンテナのログ(標準出力)を表示する
+docker container logs [options] (コンテナID|コンテナ名)
+
+実行中のコンテナの中でコマンドを実行する
+docker container exec -it [options] (コンテナID|コンテナ名) コンテナ内で実行するコマンド
+
+コンテナからホスト側へファイル・ディレクトリをコピーする
+docker container cp [options] (コンテナID|コンテナ名):コンテナ内のコピー元 ホストのコピー先
+
+ホスト側からコンテナへファイル・ディレクトリをコピーする
+docker container cp [options] ホストのコピー先 (コンテナID|コンテナ名):コンテナ内のコピー元 
+
+停止した全てコンテナをディスクから削除する
+docker container prune [options]
+
+未使用の全てのDockerイメージをディスクから削除する
+docker image prune [options]
+
+利用されていないDockerコンテナやイメージ、ボリューム、ネットワークといった全てのDockerリソースを一括して削除する
+docker system prune [options]
+
+コンテナ単位でのシステムリソースの利用状況をリアルタイムで表示する
+docker container stats [options]
