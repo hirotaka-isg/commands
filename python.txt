@@ -1,0 +1,41 @@
+python
+
+print('Hello Pyrthon')
+print("Hello Pyrthon")
+
+■コメント
+#
+
+■変数名の付け方
+date 英単語を用いる
+user_name 2語以上はアンダーバー(_)で区切る
+
+
+■変数を使う意義
+変数が何をいみしているのかわかりやすい
+apple_count
+apple_price
+total_price
+
+■型変換str int
+データの異なる型は連結できない(エラーになる)
+解決策として型を変換して結合する
+
+#priceは数値型
+price = 100
+
+#price　数値型→文字列型
+print("りんごの価格は" + str(price) + "円です")
+
+■if文
+score = 100
+if score == 100:
+	pront("よくできました")
+
+左右の値が等しい時成り立つ
+x == y
+
+左右の値が等しく無い時成り立つ
+x != y
+
+

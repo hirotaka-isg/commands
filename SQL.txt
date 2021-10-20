@@ -1,0 +1,99 @@
+
+　OS：ubuntu?
+　SPA
+　DB：MySQL
+　インフラ：AWS
+
+yum - y install mysql -server
+vi /etc/my.cnf
+
+ssh -i /Users/hirotaka/.ssh/my-key_20210612.pem ec2-user@13.230.183.245
+
+linuxコマンド
+インストール済みのソフトを確認する
+yum list installed　
+
+mysql -u root -p
+
+mysql --version
+
+・文字化け対策
+nano /etc/my.cnf
+・ [mysqld]欄の最終行に1行追記
+    character-set-server = utf8
+・[client]欄を新規追加し、1行追記
+    default-character-set=utf8
+
+
+・データベースを作成する
+create database test_t;
+
+・テーブルを作る
+use test_t;
+create table test_t(num int, name varchar(25));
+
+・作成済のテーブル確認
+show tables;
+
+■データの編集
+・データ新規登録
+insert into test_t values(1, 'aa');
+insert into test_t values(2, 'hiro');
+
+・データ修正
+update test_t set name="tt " where num=1;
+update test_t set name="tt " where num=1;
+
+・データ削除
+delete from test_t where num=1;
+
+select * from test_t;
+
+AWS→Docker→CD/CI
+
+Docker nginx puma
+
+■mariaDB起動・停止(管理者実行)
+systemctl start mariadb
+systemctl stop mariadb
+
+-----
+・データベース作成
+create database [データベース名];
+
+・データベース確認
+show databases;
+
+・データベースの選択
+use [データベース名];
+use progate;
+
+・テーブル表示
+show tables;
+
+・テーブルの作成
+create table users (id INT AUTO_INCREMENT, name TEXT, PRIMARY KEY(id));
+
+・テーブル構造の表示
+describe users;
+
+・挿入
+INSERT INTO users(name) VALUES ('にんじゃわんこ')
+
+・抽出
+select * from [テーブル名];
+
+・テーブルの削除
+DROP TABLE  [テーブル名];
+DROP TABLE  users;
+
+・データベース削除
+DROP DATABASE [データベース名];
+
+・バージョン確認
+SELECT VERSION();
+
+
+
+
+

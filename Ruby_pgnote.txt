@@ -1,0 +1,19 @@
+ruby -v
+
+文字列改行
+\n
+
+# encoding: Shift_JIS
+[書式]
+if 条件 then
+	条件が成り立った時に実行したい処理
+else
+	条件が成り立たないときに実行したい処理
+end
+
+[until文　書式]
+until 条件 do
+	繰り返したい処理
+end
+
+
