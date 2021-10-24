@@ -1,0 +1,47 @@
+
+■概要
+　構造化されたデータの表現方法
+
+■公式サイト
+yaml.org
+
+拡張子	.yml or .yaml
+#でコメントアウト
+タブでのインデントは非推奨
+
+#-----記述例-----
+person:
+  name: "hiro"
+  jpb: "cloud enginner"
+  age: "XX"
+  #キーバリューをリスト化
+  hobbies:
+    - travel
+    - diving
+    - snowboarding
+  frinds:
+    - name: "yamada"
+      age:  30
+    - name: "tanaka"
+      age:  32
+#-----記述例-----
+
+# S3バケットをひとつ作成
+Resource:
+  FirstS3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties: {}
+
+スカラー　値
+　文字列
+　数値
+　NULL
+　
+シーケンス　配列
+
+マッチング　ハッシュ(key/value)
+
+
+
+
+
