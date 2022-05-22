@@ -93,4 +93,11 @@ git clone [リモートリポジトリ]
 git pull
 	最新のリモートリポジトリブランチを取得
 
+■日本語文字化け対応
+・特定のgitリポジトリの場合
+git config --local core.quotepath false
+
+・全体に適用したい場合
+git config --global core.quotepath false
+
 
