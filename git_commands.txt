@@ -1,0 +1,58 @@
+【基本的な操作】
+■ローカルリポジトリに登録
+# リポジトリを初期化
+git init
+
+# ステージ領域へファイルを追加
+git add ファイル名
+
+# リポジトリの歴史を記録
+git commit -m "コメント"
+
+# リポジトリの状態を確認
+git status
+
+# コミットログを確認
+git log
+git log --pretty=short	# コミットログを１行のみ表示
+git log [ファイル名]		# 指定したディレクトリ、ファイルのみを表示
+
+# 変更差分の確認
+git diff
+git diff HEAD 	# ワークツリーと最新コミットの差分を確認
+
+【ブランチの操作】
+# ブランチを一覧表示
+git branch
+
+# ブランチを作成
+git branch [作成するブランチ名]
+
+# ブランチを切り替える
+git checkout [ブランチ名]
+
+# ブランチを作成して切り替える
+git checkout -b [作成するブランチ名]
+
+# 1つ前のブランチに切り替える
+git checkout -
+
+# ブランチをマージ
+git checkout master		# マージするブランチに移動
+git merge --no--ff [マージするブランチ名]	# マージ
+
+☆git log --graph
+
+■リモートリポジトリに登録（ローカルリポジトリに登録後）
+
+# リモートの登録（一度登録しておけば不要）
+git remote add リモート名 リモートのURL
+
+# リモートにファイルをアップロードする
+git push origin master
+※originはリモートの登録の際に使用したリモート名
+
+【日本語の文字化けを解消】
+# ファイル名の文字化けを解消したいディレクトリに移動して実行
+git config --local core.quotepath false
+
