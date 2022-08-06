@@ -41,16 +41,34 @@ git checkout -
 git checkout master		# マージするブランチに移動
 git merge --no--ff [マージするブランチ名]	# マージ
 
-☆git log --graph
+# ブランチを視覚的に確認する
+git log --graph
 
-■リモートリポジトリに登録（ローカルリポジトリに登録後）
+【コミットを変更する操作】
+# 歴史を戻る
+git reset
+git reset -hard [インデックス]
 
+# コミットメッセージを修正
+git commit --amend
+
+# 歴史を押しつぶして改変
+git rebase -i
+
+【リモートリポジトリへ送信】
 # リモートの登録（一度登録しておけば不要）
 git remote add リモート名 リモートのURL
 
 # リモートにファイルをアップロードする
 git push origin master
 ※originはリモートの登録の際に使用したリモート名
+
+【リモートリポジトリから取得】
+# リモートリポジトリの取得
+git colne [リモートのURL]
+
+# 最新のリモートブランチを取得
+git pull
 
 【日本語の文字化けを解消】
 # ファイル名の文字化けを解消したいディレクトリに移動して実行
