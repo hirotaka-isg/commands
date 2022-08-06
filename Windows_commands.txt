@@ -1,0 +1,9 @@
+・日付表示
+echo %date% %time%
+
+・サービスのキル
+taskkill pid/ [pid番号] /f
+
+・サービスのステータス確認
+
+
