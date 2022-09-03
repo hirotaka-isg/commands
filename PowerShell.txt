@@ -1,3 +1,8 @@
+・qiita
+https://qiita.com/ShotaKameyama/items/1d3784183f1b00ce98e5
+
+・公式ドキュ
+https://docs.microsoft.com/ja-jp/powershell/scripting/discover-powershell?view=powershell-7.2
 
 
 
