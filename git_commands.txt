@@ -65,7 +65,7 @@ git push origin master
 
 【リモートリポジトリから取得】
 # リモートリポジトリの取得
-git colne [リモートのURL]
+git clone [リモートのURL]
 
 # 最新のリモートブランチを取得
 git pull
